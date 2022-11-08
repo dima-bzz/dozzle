@@ -25,7 +25,7 @@
       </pane>
     </splitpanes>
     <button
-      @click="collapse"
+      @click="collapseNav = !collapseNav"
       class="button is-small is-rounded"
       :class="{ collapsed: collapseNav }"
       id="hide-nav"
@@ -47,6 +47,7 @@ import { Splitpanes, Pane } from "splitpanes";
 import { useProgrammatic } from "@oruga-ui/oruga-next";
 import FuzzySearchModal from "@/components/FuzzySearchModal.vue";
 
+const collapseNav = ref(false);
 const { oruga } = useProgrammatic();
 const { authorizationNeeded } = config;
 
@@ -72,9 +73,6 @@ function showFuzzySearch() {
     width: 600,
     active: true,
   });
-}
-function collapse() {
-  collapseNav.value = !collapseNav.value;
 }
 function onResized(e: any) {
   if (e.length == 2) {
