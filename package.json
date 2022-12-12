@@ -51,7 +51,7 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
+    "@intlify/vite-plugin-vue-i18n": "^7.0.0",
     "@pinia/testing": "^0.0.14",
     "@types/d3-array": "^3.0.3",
     "@types/d3-ease": "^3.0.0",
